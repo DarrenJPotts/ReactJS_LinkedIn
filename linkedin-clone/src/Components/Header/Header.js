@@ -10,8 +10,18 @@ import {
 
 import "./Header.css";
 import HeaderOption from "../HeaderOption/HeaderOption";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../Redux/userSlice";
+import { auth } from "../../firebase/firebase";
 
 function Header(props) {
+  const dispatch = useDispatch();
+
+  const LogOutOfApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
+
   return (
     <div className="header">
       <div class="header_left">
@@ -32,10 +42,7 @@ function Header(props) {
         <HeaderOption title="Jobs" Icon={BusinessCenter} />
         <HeaderOption title="Messaging" Icon={Chat} />
         <HeaderOption title="Notifications" Icon={Notifications} />
-        <HeaderOption
-          title="Me"
-          avatar="https://picsum.photos/200/200?random=2"
-        />
+        <HeaderOption title="Me" avatar={true} onClick={LogOutOfApp} />
       </div>
     </div>
   );

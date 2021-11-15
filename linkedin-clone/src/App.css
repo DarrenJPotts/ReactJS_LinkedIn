@@ -5,4 +5,12 @@
 }
 .app_body {
   display: flex;
+  margin-top: 35px;
+  max-width: 1200px;
+  margin-left: 18%;
+  margin-right: 18%;
+}
+
+html {
+  background-color: #f3f2ef;
 }

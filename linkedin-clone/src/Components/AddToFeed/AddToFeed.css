@@ -1,0 +1,39 @@
+.addToFeed {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.addToFeed_profile {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.addToFeed_profile > h2 {
+  font-size: 15px;
+}
+.addToFeed_profile > p {
+  font-size: 13px;
+  color: lightgray;
+}
+
+.addToFeed_button {
+  border: 1px solid gray;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 5px;
+  margin-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.addToFeed_button:hover {
+  background-color: whitesmoke;
+  border: 2px solid gray;
+}
+
+.addToFeed_buttonText {
+  font-size: 15px;
+  font-weight: 600;
+  color: gray;
+}
